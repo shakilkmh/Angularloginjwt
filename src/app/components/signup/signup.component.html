@@ -1,0 +1,27 @@
+
+
+
+
+<div class="container">
+    <form [formGroup]="signupForm" class="bd" style="align-items: center;">
+    <h2 style="text-align: center;">Register</h2>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control"  type="text" name="name" id="name" placeholder="Enter your name" formControlName="name" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control"  type="email" name="email" id="email" placeholder="Enter your email" formControlName="email" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control"  type="password" name="password" id="password" placeholder="Enter your password" formControlName="password" />
+    </div>
+    <div class="form-group">
+        <label for="confirmPassword">ConfirmPassword</label>
+        <input class="form-control"  type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter your confirm password"
+        formControlName="confirmPassword" />
+    </div>
+    <button  class="mt-2 btn btn-info" type="button" [disabled]="signupForm.invalid" (click)="signup()">Signup</button>
+</form>
+</div>

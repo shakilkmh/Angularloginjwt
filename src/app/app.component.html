@@ -1,0 +1,30 @@
+
+
+
+
+
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Angular App</a>
+
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="!isLoggedIn" type="button" routerLink="/signup" style="color: #00ffff;font-weight: bold">Signup</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="isLoggedIn" type="button" (click)=handleLogout() style="color: #00ffff; font-weight: bold;" >Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="!isLoggedIn" type="button" routerLink="/login"   style="color: #00ffff; font-weight: bold;">Login</a>
+        </li>
+
+    </ul>
+        
+        
+        
+    </div>
+
+</nav>
+
+<router-outlet></router-outlet>
